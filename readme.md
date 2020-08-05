@@ -1,6 +1,12 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-
+## Installation (PHP 7.1+)
+> 1. `git clone https://github.com/Anntie/getcode.git`
+> 2. Create .env - `cp .env.example .env`
+> 3. Configure .env
+> 4. `composer install`
+> 7. `php artisan migrate`
+> 8. `php artisan db:seed` 
 
 ## Supervisor config example
 ```
