@@ -15,11 +15,20 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\InjectorController;
 use App\Http\Controllers\ParserController;
+use App\Http\Controllers\ProductsController;
 
-Route::get('/injector', [InjectorController::class, 'show']);
+Route::get('/injector', [InjectorController::class, 'show'])
+    ->name('injector');
+
+Route::get('/', [ProductsController::class, 'showList'])
+    ->name('list');
+
+Route::get('/product/{product}', [ProductsController::class, 'showProduct'])
+    ->name('product');
 
 Route::group(['prefix' => 'parser'], function () {
-    Route::get('/', [ParserController::class, 'index']);
+    Route::get('/', [ParserController::class, 'index'])
+        ->name('parser');
     Route::post('/', [ParserController::class, 'add'])
         ->name('parser.add');
 });

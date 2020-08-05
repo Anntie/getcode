@@ -4,6 +4,12 @@
     <title>Add url</title>
 </head>
 <body>
+@include('menu')
+
+@if(session()->get('success', 'false') === 'true')
+    <div style="color: green;">Added to the queue</div>
+@endif
+
 <form action="{{ route('parser.add') }}" method="post">
     @csrf
     @error('url')
