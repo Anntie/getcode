@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class FirstTaskController
+class InjectorController
 {
     public function show()
     {
